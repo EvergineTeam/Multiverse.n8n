@@ -10,6 +10,8 @@ export class MultiverseCompactifaiApi implements ICredentialType {
 
 	displayName = 'Multiverse Compactifai API';
 
+	icon: ICredentialType['icon'] = 'file:../nodes/MultiverseCompactifAi/multiverseCompactifai.svg';
+
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/@multiverse/-compactifai?tab=readme-ov-file#credentials';
 
@@ -36,7 +38,7 @@ export class MultiverseCompactifaiApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://api.compactif.ai/v1',
-			url: '/v1/user',
+			url: '/models',
 		},
 	};
 }

@@ -2,16 +2,14 @@
 	"node": "@multiverse/n8n-nodes-compactifai",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Development", "Developer Tools"],
+	"categories": ["AI"],
+	"subcategories": {
+		"AI": ["Language Models", "Root Nodes"]
+	},
 	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": "https://github.com/org/repo?tab=readme-ov-file#credentials"
-			}
-		],
 		"primaryDocumentation": [
 			{
-				"url": "https://github.com/org/repo?tab=readme-ov-file"
+				"url": "https://docs.compactif.ai/api_reference/"
 			}
 		]
 	}
