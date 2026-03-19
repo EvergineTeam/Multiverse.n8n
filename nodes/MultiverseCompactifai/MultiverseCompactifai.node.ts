@@ -15,8 +15,8 @@ export class MultiverseCompactifAi implements INodeType {
 		displayName: 'Multiverse CompactifAi',
 		name: 'multiverseCompactifAi',
 		icon: {
-			light: 'file:multiverseCompactifai.svg',
-			dark: 'file:multiverseCompactifai.dark.svg',
+			light: 'file:MultiverseCompactifAi.svg',
+			dark: 'file:MultiverseCompactifAi.dark.svg',
 		},
 		group: ['transform'],
 		version: 1,
