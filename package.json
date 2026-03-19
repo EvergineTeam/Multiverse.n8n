@@ -1,6 +1,6 @@
 {
   "name": "@plainconcepts/n8n-nodes-compactifai",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node for Compactifai API integration",
   "license": "MIT",
   "homepage": "",
