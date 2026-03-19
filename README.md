@@ -1,4 +1,4 @@
-# @multiverse/n8n-nodes-compactifai
+# @plainconcepts/n8n-nodes-compactifai
 
 Use CompactifAi language models as an AI Model provider in n8n AI workflows.
 
@@ -16,7 +16,7 @@ Follow the official community nodes installation guide:
 
 Package name:
 
-- `@multiverse/n8n-nodes-compactifai`
+- `@plainconcepts/n8n-nodes-compactifai`
 
 ## What This Node Does
 

@@ -1,5 +1,5 @@
 {
-	"node": "@multiverse/n8n-nodes-compactifai",
+	"node": "@plainconcepts/n8n-nodes-compactifai",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["AI"],
