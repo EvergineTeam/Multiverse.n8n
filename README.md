@@ -1,46 +1,98 @@
 # @multiverse/n8n-nodes-compactifai
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+Use CompactifAi language models as an AI Model provider in n8n AI workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+This package provides one n8n community node:
+
+- Multiverse CompactifAi (AI Language Model node)
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
-[Installation](#installation)
-[Operations](#operations)
-[Credentials](#credentials)
-[Compatibility](#compatibility)
-[Usage](#usage)
-[Resources](#resources)
-[Version history](#version-history)
-
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+Follow the official community nodes installation guide:
 
-## Operations
+- [Install community nodes in n8n](https://docs.n8n.io/integrations/community-nodes/installation/)
 
-_List the operations supported by your node._
+Package name:
+
+- `@multiverse/n8n-nodes-compactifai`
+
+## What This Node Does
+
+The Multiverse CompactifAi node is an AI Language Model node that:
+
+- Authenticates against CompactifAi using a bearer access token
+- Loads available models dynamically from `GET /v1/models`
+- Exposes the selected model to downstream AI nodes in n8n
+- Supports common generation controls:
+	- Temperature
+	- Maximum Tokens
+	- Frequency Penalty
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+Credential type:
 
-## Compatibility
+- Multiverse Compactifai API
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
+Required field:
+
+- Access Token
+
+How to configure:
+
+1. Create a CompactifAi access token.
+2. In n8n, create a new credential of type Multiverse Compactifai API.
+3. Paste your token into Access Token.
+4. Save and use it in the node.
+
+The credential test calls:
+
+- `GET https://api.compactif.ai/v1/models`
 
 ## Usage
 
-_This is an optional section. Use it to help users with any difficult or confusing aspects of the node._
+Typical AI workflow setup:
 
-_By the time users are looking for community nodes, they probably already know n8n basics. But if you expect new users, you can link to the [Try it out](https://docs.n8n.io/try-it-out/) documentation to help them get started._
+1. Add the Multiverse CompactifAi node.
+2. Select your credential.
+3. Pick a model from the list (or provide a model ID with an expression).
+4. Optionally tune Temperature, Maximum Tokens, and Frequency Penalty.
+5. Connect this node output to an AI node that expects an AI Language Model.
+
+Notes:
+
+- Maximum Tokens set to `-1` means no explicit max token limit is sent.
+- If your model list is empty, verify token validity and API access first.
+
+## Compatibility
+
+- Built with n8n Nodes API version `1`
+- Intended for n8n versions that support AI Language Model node connections
+
+If you run into compatibility issues, open an issue in the repository with your n8n version.
+
+## Development
+
+Project scripts:
+
+- `npm run build` - Build the node
+- `npm run dev` - Start development mode
+- `npm run lint` - Lint the code
+- `npm run lint:fix` - Lint and auto-fix
+- `npm run release` - Run release flow
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* _Link to app/service documentation._
+- [CompactifAi API documentation](https://docs.compactif.ai/api_reference/)
+- [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
+- [n8n node development docs](https://docs.n8n.io/integrations/creating-nodes/)
 
-## Version history
+## Version History
 
-_This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
+### 0.1.0
+
+- Initial release
+- Added Multiverse CompactifAi AI Language Model node
+- Added CompactifAi access token credential
