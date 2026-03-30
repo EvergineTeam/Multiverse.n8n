@@ -132,6 +132,7 @@ export class MultiverseCompactifAi implements INodeType {
 			temperature: options.temperature ?? 1,
 			maxTokens: options.maxTokens === -1 ? undefined : options.maxTokens,
 			frequencyPenalty: options.frequencyPenalty,
+			streaming: true,
 			configuration: {
 				baseURL: 'https://api.compactif.ai/v1',
 			},
