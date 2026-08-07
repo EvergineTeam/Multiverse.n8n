@@ -10,7 +10,10 @@ export class MultiverseCompactifaiApi implements ICredentialType {
 
 	displayName = 'Multiverse Compactifai API';
 
-	icon: ICredentialType['icon'] = 'file:../nodes/MultiverseCompactifAi/MultiverseCompactifAi.svg';
+	icon: ICredentialType['icon'] = {
+		light: 'file:../nodes/MultiverseCompactifAi/MultiverseCompactifAi.svg',
+		dark: 'file:../nodes/MultiverseCompactifAi/MultiverseCompactifAi.dark.svg',
+	};
 
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/@plainconcepts/-compactifai?tab=readme-ov-file#credentials';

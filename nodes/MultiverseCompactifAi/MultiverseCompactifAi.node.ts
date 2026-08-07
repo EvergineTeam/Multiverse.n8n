@@ -21,6 +21,7 @@ export class MultiverseCompactifAi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		description: 'Use CompactifAi language models in your AI workflows',
+		subtitle: '={{$parameter["model"]}}',
 		defaults: { name: 'Multiverse CompactifAi' },
 		inputs: [],
 		outputs: [NodeConnectionTypes.AiLanguageModel],

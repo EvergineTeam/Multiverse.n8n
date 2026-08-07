@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "description": "n8n community node for Compactifai API integration",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/EvergineTeam/Multiverse.n8n",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -29,6 +29,7 @@
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
+    "aiNodeSdkVersion": 1,
     "strict": false,
     "credentials": [
       "dist/credentials/MultiverseCompactifaiApi.credentials.js"
