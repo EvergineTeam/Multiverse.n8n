@@ -8,7 +8,7 @@ import {
 	type ISupplyDataFunctions,
 	type SupplyData,
 } from 'n8n-workflow';
-import { ChatOpenAI } from '@langchain/openai';
+import { supplyModel } from '@n8n/ai-node-sdk';
 
 export class MultiverseCompactifAi implements INodeType {
 	description: INodeTypeDescription = {
@@ -126,18 +126,15 @@ export class MultiverseCompactifAi implements INodeType {
 			frequencyPenalty?: number;
 		};
 
-		const llm = new ChatOpenAI({
+		return supplyModel(this, {
+			type: 'openai',
+			baseUrl: 'https://api.compactif.ai/v1',
 			apiKey: credentials.accessToken,
-			modelName: model,
+			model,
 			temperature: options.temperature ?? 1,
 			maxTokens: options.maxTokens === -1 ? undefined : options.maxTokens,
 			frequencyPenalty: options.frequencyPenalty,
 			streaming: true,
-			configuration: {
-				baseURL: 'https://api.compactif.ai/v1',
-			},
 		});
-
-		return { response: llm };
 	}
 }
