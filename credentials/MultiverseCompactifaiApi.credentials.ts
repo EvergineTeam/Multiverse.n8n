@@ -15,8 +15,7 @@ export class MultiverseCompactifaiApi implements ICredentialType {
 		dark: 'file:../nodes/MultiverseCompactifAi/MultiverseCompactifAi.dark.svg',
 	};
 
-	// Link to your community node's README
-	documentationUrl = 'https://github.com/org/@plainconcepts/-compactifai?tab=readme-ov-file#credentials';
+	documentationUrl = 'https://github.com/EvergineTeam/Multiverse.n8n#credentials';
 
 	properties: INodeProperties[] = [
 		{

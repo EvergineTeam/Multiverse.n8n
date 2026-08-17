@@ -1,11 +1,8 @@
 {
-	"node": "@plainconcepts/n8n-nodes-compactifai",
+	"node": "@plainconcepts/n8n-nodes-compactifai.multiverseCompactifAi",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["AI"],
-	"subcategories": {
-		"AI": ["Language Models", "Root Nodes"]
-	},
+	"categories": ["Development"],
 	"resources": {
 		"primaryDocumentation": [
 			{
